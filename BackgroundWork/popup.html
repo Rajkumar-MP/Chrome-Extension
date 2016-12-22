@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RJ Demo</title>
+	<!-- <link href="lib/styles/bootstrap-theme-Material.css" rel="stylesheet"> -->
+	<link href="lib/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/styles/ionicons.min.css" rel="stylesheet">
+    <!-- <link href="popup.css" rel="stylesheet"> -->
+	
+    <script type="text/javascript" src="lib/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="lib/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+	
+	<style>
+		.cmw_toolBar_ h6 {
+			text-align: center;
+		}
+		.cmw_toolBar_ {
+			background: rgba(217,0,59,1);
+			line-height: 42px;
+			height: 42px;
+			border-top: 1px solid rgba(255,0,69,1);
+			border-bottom: 1px solid rgba(174,0,47,1);
+		}
+		#cmw_toolBar_titleText {
+			display: inline-block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: rgba(255,255,255,1);
+			text-shadow: 0px 1px 0 rgba(0,0,0,.1);
+			font-size: 16px;
+		}
+		
+		.form-control { height: 40px; }
+	</style>
+  </head>
+  <body style="width: 320px;min-height: 400px;max-height: 480px;">
+	<div class="cmw_toolBar_">
+	<h6 id="title" class="">
+		<img src="img/logo.png">
+	</h6>
+	</div>
+	<div style="padding: 10px;" id="loginPage">
+		<div  id="errorMessage" class="alert alert-dismissible alert-danger" style="text-align:center">
+		  <strong>Invalid Username/Password.</strong><br>Please enter Valid Details</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label" for="focusedInputUsr">OnlineId</label>
+			<input class="form-control" id="focusedInputUsr" type="text" value="" placeholder="Enter UserName">
+		</div>
+		<div class="form-group">
+			<label class="control-label" for="focusedInputPwd">Password</label>
+			<input class="form-control" id="focusedInputPwd" type="password" value="" placeholder="Enter Password">
+		</div>
+		
+		<a href="javascript:;" id="signinBtnClick" class="btn btn-primary   btn-lg 	btn-block">Signin</a>
+	</div>
+	<div style="padding: 10px;"  id="logoutPage">
+		<div class="" style="margin-bottom:0;">
+		  <h4>Hello <span>Rajkumar</span><span id="cstName1"></span></h4>
+		  <!-- <h4>ID <span id="cstID"></span></h4>
+		  <div style="line-height: initial; font-size: initial;  padding-bottom: 10px;">This is a simple hero unit test Description</div> -->
+		  
+		  <div class="well well-sm" style="margin:0px; border-radius:0px">Account Info</div>
+		  <div class="list-group">
+			  <a href="javascript:;" class="list-group-item">
+				<h4 class="list-group-item-heading">Interest Checking-123</h4>
+				<p class="list-group-item-text">$250</p>
+			  </a>
+			  <a href="javascript:;" class="list-group-item">
+				<h4 class="list-group-item-heading">Savings Plus - 456</h4>
+				<p class="list-group-item-text"><sup>$</sup><span>350</span></p>
+			  </a>
+			</div>
+		  
+		  <p><a href="javascript:;" id="signoutBtnClick" class="btn btn-primary btn-block">Logout</a></p>
+		</div>
+		
+	</div>
+	
+  </body>
+</html>

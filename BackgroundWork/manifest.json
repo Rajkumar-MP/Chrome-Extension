@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bank Demo Extension",
+  "description": "This extension used for Demo Purpose",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "img/icon.png",
+   "default_title": "Demo RJ",
+   "default_popup": "popup.html"
+  },
+  "icons": {
+      "128": "img/img_128.png",
+      "16": "img/img_16.png",
+      "48": "img/img_48.png"
+   },
+   "background": {
+    "page": "popup.html"
+  },
+  
+   "content_scripts": [
+    {
+		"exclude_matches": [ "https://www.test.com/*" ],
+		"matches": [ "*://*/*" ],
+		//"css": ["lib/styles/bootstrap.min.css"],
+		"js": ["lib/scripts/jquery-1.11.1.min.js","lib/scripts/bootstrap.min.js", "popup.js", "background.js"]
+		}
+	  ],
+  "permissions": [ "activeTab" ,"storage" ],
+  "web_accessible_resources": [ "resourcesTmp/*" ]
+}
